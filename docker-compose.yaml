@@ -1,0 +1,55 @@
+version: '3.8'
+services:
+  influx:
+    build: 
+      context: './influx'
+    container_name: influx
+    env_file:
+      - ./influx.env
+    ports:
+      - "8086:8086"
+    volumes:
+      - influx_data:/var/lib/influx/data    
+
+  mqtt-broker:
+    build: 
+      context: './mqtt-broker'
+    container_name: mqtt-broker
+    ports:
+      - "1883:1883"
+
+  mqtt-subscriber:
+    build: 
+      context: './mqtt-subscriber'
+    container_name: mqtt-subscriber
+    env_file:
+      - ./mqtt-subscriber.env
+  
+  mqtt-publisher-1:
+    build: 
+      context: './mqtt-publisher'
+    container_name: mqtt-publisher-1
+    env_file:
+      - ./mqtt-publisher.env
+
+  mqtt-publisher-2:
+    build: 
+      context: './mqtt-publisher'
+    container_name: mqtt-publisher-2
+    env_file:
+      - ./mqtt-publisher.env
+ 
+  grafana:
+    build:
+      context: './grafana'
+    container_name: grafana
+    env_file:
+      - ./grafana.env
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana/data
+    
+volumes:
+  influx_data: {}
+  grafana_data: {}

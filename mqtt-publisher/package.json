@@ -1,0 +1,15 @@
+{
+  "name": "synthetic-smartcars-data-gen",
+  "version": "1.0.0",
+  "description": "mqtt client that publishes data to a localhost broker",
+  "main": "generator.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabio Cinicolo",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^4.3.7"
+  }
+}

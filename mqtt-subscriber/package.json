@@ -1,0 +1,24 @@
+{
+  "name": "smartvehiclesmqttsubscriber",
+  "version": "1.0.0",
+  "description": "Nodejs server for normalizing and persisting sensor data coming from smart vehicles",
+  "main": "subscriber.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repo.git"
+  },
+  "author": {
+    "name": "Fabio Cinicolo",
+    "email": "fabiocinicolo@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.33.2",
+    "@influxdata/influxdb-client-apis": "^1.33.2",
+    "mqtt": "^4.3.7"
+  }
+}

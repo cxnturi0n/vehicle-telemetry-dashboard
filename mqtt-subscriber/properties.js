@@ -1,0 +1,9 @@
+export const MQTT_PROTOCOL = process.env.MQTT_PROTOCOL
+export const MQTT_BROKER_HOST = process.env.MQTT_BROKER_HOST
+export const MQTT_BROKER_PORT = process.env.MQTT_BROKER_PORT
+export const CLIENT_ID = process.env.CLIENT_ID
+export const MQTT_TOPIC = process.env.MQTT_TOPIC
+export const INFLUX_URL = process.env.INFLUX_URL
+export const INFLUX_API_TOKEN = process.env.INFLUX_API_TOKEN
+export const INFLUX_ORG = process.env.INFLUX_ORG
+export const INFLUX_BUCKET = process.env.INFLUX_BUCKET
