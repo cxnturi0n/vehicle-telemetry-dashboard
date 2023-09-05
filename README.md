@@ -14,11 +14,11 @@ https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/f1c371b
 ```
 git clone https://github.com/cxnturi0n/vehicle-telemetry-dashboard.git
 ```
-3. Navigate to the root directory:
+2. Navigate to the root directory:
 ```
 cd vehicle-telemetry-dashboard
 ```
-4. Run
+3. Run
 ```
 docker compose up
 ```
