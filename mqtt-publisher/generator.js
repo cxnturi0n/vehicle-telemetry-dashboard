@@ -81,9 +81,12 @@ const simulate = () => {
   const interval = setInterval(() => {
     const timestamp = formatTimestamp(new Date());
     // Update speed and acceleration with random fluctuations
-    const speedChange = generateRandomValue(0, 2);
+    const speedChange = generateRandomValue(0, 5);
     speed += speedChange;
-    acceleration = speedChange > 0 ? generateRandomValue(0, 2) : 0;
+
+    if (speedChange > 0) acceleration = generateRandomValue(0, 2);
+    else if (speedChange == 0) acceleration = 0;
+    else acceleration = generateRandomValue(0, -2);
 
     // Update latitude and longitude with small random oscillations
     const latitudeChange = generateRandomValue(0.001, 0.01);
@@ -97,9 +100,9 @@ const simulate = () => {
     temperature += generateRandomValue(-0.1, 0.1);
     humidity += generateRandomValue(-0.1, 0.1);
 
-    // Decrease fuel and battery levels every 10 seconds
+    // Decrease fuel and battery levels every 5 seconds
     elapsedSeconds++;
-    if (elapsedSeconds % 10 === 0) {
+    if (elapsedSeconds % 5 === 0) {
       // Decrease fuel and battery levels by a random value between 0 and -1
       const fuelDecrease = generateRandomValue(0, -1);
       const batteryDecrease = generateRandomValue(0, -1);
@@ -117,8 +120,8 @@ const simulate = () => {
     // Generate the payload
     const payload = {
       position: {
-        latitude: newLatitude.toFixed(6), // Adjust the precision as needed
-        longitude: newLongitude.toFixed(6), // Adjust the precision as needed
+        latitude: newLatitude.toFixed(6),
+        longitude: newLongitude.toFixed(6),
       },
       battery: battery.toFixed(2),
       fuel: fuel.toFixed(2),
@@ -130,12 +133,18 @@ const simulate = () => {
       timestamp: timestamp,
     };
 
-    // Write the payload to InfluxDB or any other destination
+    // Write the payload to InfluxDB
     const s = JSON.stringify(payload);
     client.publish(MQTT_TOPIC, JSON.stringify(payload));
 
-    // Alternate the license plate value every 10 data points
+    // Alternate the license plate value every 30 data points
     if (elapsedSeconds % 30 === 0) {
+      speed = 0;
+      acceleration = 13;
+      temperature = generateRandomValue(25, 35);
+      humidity = generateRandomValue(40, 60);
+      fuel = generateRandomValue(30, 100);
+      battery = generateRandomValue(30, 100);
       licensePlate = generateRandomLicensePlate();
     }
   }, 1000);
