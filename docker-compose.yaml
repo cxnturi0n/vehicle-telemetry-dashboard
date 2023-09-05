@@ -9,7 +9,9 @@ services:
     ports:
       - "8086:8086"
     volumes:
-      - influx_data:/var/lib/influx/data    
+      - influx_data:/var/lib/influx/data
+    networks:
+      - vehicle-telemetry-dashboard    
 
   mqtt-broker:
     build: 
@@ -17,6 +19,8 @@ services:
     container_name: mqtt-broker
     ports:
       - "1883:1883"
+    networks:
+      - vehicle-telemetry-dashboard
 
   mqtt-subscriber:
     build: 
@@ -24,6 +28,8 @@ services:
     container_name: mqtt-subscriber
     env_file:
       - ./mqtt-subscriber.env
+    networks:
+      - vehicle-telemetry-dashboard
   
   mqtt-publisher-1:
     build: 
@@ -31,6 +37,8 @@ services:
     container_name: mqtt-publisher-1
     env_file:
       - ./mqtt-publisher.env
+    networks:
+      - vehicle-telemetry-dashboard
 
   mqtt-publisher-2:
     build: 
@@ -38,6 +46,8 @@ services:
     container_name: mqtt-publisher-2
     env_file:
       - ./mqtt-publisher.env
+    networks:
+      - vehicle-telemetry-dashboard
  
   grafana:
     build:
@@ -49,7 +59,14 @@ services:
       - "3000:3000"
     volumes:
       - grafana_data:/var/lib/grafana/data
+    networks:
+      - vehicle-telemetry-dashboard
     
 volumes:
   influx_data: {}
   grafana_data: {}
+
+networks:
+  vehicle-telemetry-dashboard:
+    name: vehicle-telemetry-dashboard
+    driver: bridge
