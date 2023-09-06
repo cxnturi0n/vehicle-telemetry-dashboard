@@ -8,6 +8,10 @@
 
 https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/f1c371ba-7b7f-4737-b3e6-276d72f93482
 
+## Architecture
+
+![Architecture](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/08747278-fdf2-41e5-8d79-e421745d6009)
+
 ## Try it
 
 1. Clone the repository:
