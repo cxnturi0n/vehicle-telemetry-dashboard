@@ -1,5 +1,3 @@
-# Description coming soon..
-
 ## Dashboard Image Demo
 
 ![DashboardImageDemo](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/87313476-1321-4c9b-9eaf-9b99a381b4e4)
@@ -10,7 +8,7 @@ https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/f1c371b
 
 ## Architecture
 
-![Architecture](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/08747278-fdf2-41e5-8d79-e421745d6009)
+![Pipeline](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/8d4da2f8-74dd-4d36-a69b-752621123805)
 
 ## Try it
 
