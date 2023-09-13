@@ -24,3 +24,4 @@ cd vehicle-telemetry-dashboard
 ```
 docker compose up
 ```
+4. Visit dashboard: http://localhost:3000/d/a2993ba7-2591-4bf7-b113-bcb9a78d3579/smart-cars-monitor
