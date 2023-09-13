@@ -8,7 +8,7 @@ git clone https://github.com/cxnturi0n/vehicle-telemetry-dashboard.git
 ```
 cd vehicle-telemetry-dashboard
 ```
-3. Start containers
+3. Start containers:
 ```
 docker compose up
 ```
