@@ -14,9 +14,13 @@ docker compose up
 ```
 4. Visit dashboard: http://localhost:3000/d/a2993ba7-2591-4bf7-b113-bcb9a78d3579/smart-cars-monitor
 
-## Architecture
+## Local Architecture Schema
 
 ![Pipeline](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/8d4da2f8-74dd-4d36-a69b-752621123805)
+
+## Cloud Architecture Schema
+
+![CloudPipeline](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/5dc74afa-a99d-4d95-b5d2-f974929d36b6)
 
 ## Dashboard Image Demo
 
