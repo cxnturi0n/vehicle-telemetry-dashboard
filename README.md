@@ -20,7 +20,7 @@ docker compose up
 
 ## Cloud Architecture Schema
 
-![CloudPipeline](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/5dc74afa-a99d-4d95-b5d2-f974929d36b6)
+![CloudArchitecture](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/0667f1c0-ee52-47d5-9449-3c55f1f5ffe3)
 
 ## Dashboard Image Demo
 
