@@ -1,3 +1,11 @@
+## Dashboard Image Demo
+
+![DashboardImageDemo](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/87313476-1321-4c9b-9eaf-9b99a381b4e4)
+
+## Dashboard Video Demo
+
+https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/f1c371ba-7b7f-4737-b3e6-276d72f93482
+
 ## Documentation
 
 https://drive.google.com/file/d/1U5lvIVPgVVQvWOU0LYjcrhUTlCuFN47g/view?usp=sharing
@@ -25,11 +33,3 @@ docker compose up
 ## Cloud Architecture Schema
 
 ![CloudArchitecture](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/0667f1c0-ee52-47d5-9449-3c55f1f5ffe3)
-
-## Dashboard Image Demo
-
-![DashboardImageDemo](https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/87313476-1321-4c9b-9eaf-9b99a381b4e4)
-
-## Dashboard Video Demo
-
-https://github.com/cxnturi0n/vehicle-telemetry-dashboard/assets/75443422/f1c371ba-7b7f-4737-b3e6-276d72f93482
